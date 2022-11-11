@@ -1,0 +1,295 @@
+html{
+    background:linear-gradient(#5461AC, #01FE89);
+    background-repeat: no-repeat;
+    height: auto;
+    margin: 0;
+    width: 100vw;
+    font-family: 'Heebo', sans-serif;
+    box-sizing: border-box;
+    min-height: 100vh;
+    max-width: 100%
+}
+body{
+  width: 100%;
+  overflow-x:hidden;
+  height: auto;
+ 
+}
+
+.side-border {
+    text-align: center;
+    
+    width: 20%;
+    height: 100%;
+    border-left: 8px solid white;
+    border-right: 8px solid white;
+}
+
+.todo-list{
+    background-color: chartreuse;
+}
+
+.todo-form{
+    display: flex;
+    margin-top: 3%;
+    border-width: 0px;
+  
+}
+
+
+.todo-form-div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.todo-text{
+    color:white;
+    font-weight: 500;
+    font-size: 1.3em;
+    display: flex;
+    align-self: flex-end;
+}
+
+.delete-button {
+    background-color: red;
+    color:white;
+    font-weight: 700;
+    margin-top: 2.5%;
+    border-radius: 1em;
+    width: 20%;
+  padding: .4rem;
+  font-size: 1.3em;
+  cursor: pointer;
+  
+}
+
+.new-todo-input {
+    border:4px #0c9cac solid;
+    outline: none;
+    max-height: 45px;
+ border-left: 8px #0c9cac solid;
+font-size: 1.4em;
+}
+
+.add-button{
+    background-color: #0c9cac;
+    color: white;
+    font-weight: 800;
+    font-size: 1.1em;
+  padding: .5em 1.5em;
+  border:none;
+cursor: pointer;
+}
+
+.todo-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 3% auto;
+    margin-bottom: 1%;
+    padding:.1em;
+    width: 80%;
+    border-radius: 1em;
+    height: auto;
+    animation: pop .3s;
+    background: linear-gradient(
+        90deg,
+         rgb(13, 145, 52) 0%,
+        rgba(76, 228, 6, 0.801) 100%
+      );
+}
+
+.todo-label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+}
+
+
+.todo-container:nth-child(4n + 1) {
+  background: linear-gradient(
+    90deg,
+    rgb(241, 2, 42) 0% ,
+     rgb(255, 6, 6) 100%
+  );
+}
+
+.todo-container:nth-child(4n + 2) {
+  background: linear-gradient(
+    90deg,
+    rgba(17, 122, 255, 1) 0%,
+    rgba(20, 159, 255, 1) 100%
+  );
+}
+
+.todo-container:nth-child(4n + 3) {
+    background: linear-gradient(
+      90deg,
+      rgba(155, 0, 250, 1) 0%,
+       rgba(93, 12, 255, 1) 100%
+    );
+  }
+  
+ 
+  
+
+  .todo-input-date {
+   outline: none;
+   color:white;
+   background: transparent;
+   border:1px black;
+   font-weight: 500;
+   font-size: 1.2em;
+ 
+}
+
+::placeholder { 
+    color: white;
+    opacity: .86; 
+  }
+
+  .todo-input-info {
+    display: block;
+  outline: none;
+  color:black;
+  background: white;
+  border:1px black;
+  padding-bottom: 12vh;
+  font-size: 1.4rem;
+  width: 95%;
+
+  }
+
+  .info-button {
+    background-color: black;
+    color: white;
+    font-weight: 500;
+    border-radius: 1em;
+    padding: .3em 1em;
+    cursor: pointer;
+    display: flex;
+  }
+
+  .info-container{
+    display: flex;
+    height: 30vh;
+    flex-direction: column;
+    min-width: 180px;
+    text-align: center;
+    animation: pop .3s;
+  }
+  @keyframes pop {
+    0%{
+      transform: scale(.1);
+    }
+    100%{
+      transform:scale(1);
+    }
+  }
+
+textarea::placeholder{
+  color: black;
+}
+
+.info-container .delete-button {
+  width:auto;
+  align-self: center;
+  text-align: center;
+}
+
+.todo-label input {
+  width:30px;
+  height:30px;
+  margin-right: 10px;
+}
+
+.checkbox{
+  height: 30px;
+  width: 30px;
+  margin-right: 1%;
+  cursor: pointer;
+}
+
+@media screen and (max-width:830px){
+
+.todo-form-div{
+  flex-direction: column;
+  width: 95%;
+  margin: auto;
+}
+.new-todo-input{
+  width: 70%;
+}
+.add-button{
+  width: 20%;
+  padding: 0;
+}
+
+.delete-button{
+  width: 50%;
+  display: flex;
+  align-self: flex-end;
+  margin-right: 9%;
+font-size: .9em;
+justify-content: center;
+text-align: center;
+}
+
+.todo-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 3% auto;
+  margin-bottom: 1%;
+  padding:.2em;
+  width: 90%;
+}
+
+.checkbox{
+  height: 20px;
+  min-height: 18px;
+  width: 20px;
+
+}
+
+.todo-input-date {
+
+ width: 80px;
+  font-size: 1em;
+}
+
+.todo-text{
+  font-size: 1em;
+}
+
+.info-container{
+padding-right:50%;
+
+}
+
+.todo-input-info{
+  height: 60px;
+}
+.todo-label input {
+  width:15px;
+  height:15px;
+  margin-right: 8px;
+}
+
+.info-button{
+  padding: .1em 1em;
+  text-align: center;
+}
+}
+
+.info-icon {
+  background-color: rgb(92, 243, 92);
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+margin-top: 5px;
+margin-right: 5px;
+}
